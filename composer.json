@@ -1,6 +1,10 @@
 {
     "name": "aungmyokyaw/smile-one",
     "type": "library",
+    "license": "MIT",
+    "require": {
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
     "autoload": {
         "psr-4": {
             "Amk\\SmileOne\\": "src/"
@@ -19,8 +23,7 @@
     "authors": [
         {
             "name": "Aung Myo Kyaw",
-            "email": "aungmyokyaw28637@gmail.com"
+            "email": "amk01.dev@gmail.com"
         }
-    ],
-    "require": {}
+    ]
 }
