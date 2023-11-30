@@ -1,0 +1,26 @@
+{
+    "name": "aungmyokyaw/smile-one",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Amk\\SmileOne\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amk\\SmileOne\\Provider\\SmileServiceProvider"
+            ],
+            "aliases": {
+                "SmileOne" : "Amk\\SmileOne\\Facades\\SmileOne"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Aung Myo Kyaw",
+            "email": "aungmyokyaw28637@gmail.com"
+        }
+    ],
+    "require": {}
+}
