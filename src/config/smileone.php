@@ -4,8 +4,6 @@ return [
     'uid' => '', // Merchant UID
     'email' => '', // Merchant Email
     'key' => '', // Merchant Key
-    'userid' => '', // Merchant User ID
-    'zoneid' => '', // Merchant Zone
     'domain' => 'https://www.smile.one', //Domain URL
 
     "API_URL" => [
