@@ -14,7 +14,7 @@ php artisan vendor:publish --tag="smileone-config"
 ```
 After publishing the package's configuration file, you will find the file at `config/smileone.php`. You will need to fill out the necessary data in this file to use the package.
 ## Usage samples
-```
+```php
 
     SmileOne::setProduct(#ProductName)->getProductList(); // Get Product Points List
     // Replace '#ProductName' with your actual product name.
