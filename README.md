@@ -22,7 +22,7 @@ After publishing the package's configuration file, you will find the file at `co
     
     SmileOne::setProduct(#ProductName)->getPoints(); // Get Total Available SmilePoints With Product
     
-    SmileOne::setProduct('mobilelegends')->getProduct(); // Get Main Product
+    SmileOne::setProduct(#ProductName)->getProduct(); // Get Main Product
       
     SmileOne::setProduct(#ProductName,#ProductId)->setUser(#UserID,#UserZoneID)->checkProductPoints(); // Check Points with User ID
       
