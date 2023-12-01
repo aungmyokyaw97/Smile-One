@@ -1,7 +1,6 @@
 <?php
 
 namespace Amk\SmileOne\Traits;
-use Amk\Tmh\Exceptions\SmileOneException;
 use Illuminate\Support\Facades\Http;
 
 trait SmileOneTrait{
@@ -22,21 +21,11 @@ trait SmileOneTrait{
     }
 
     public function roleQuery(){
-        $data['product'] = $this->product;       
-        $data['productid'] = $this->productid;
-        $data['userid'] = $this->userid;        
-        $data['zoneid'] = $this->zoneid;
-
-        return $this->callSmileOne($data,$this->getFullURL(config('smileone.API_URL.role-query')));
+        return $this->callSmileOne($this->formParam(),$this->getFullURL(config('smileone.API_URL.role-query')));
     }
 
     public function postPurchase(){
-        $data['product'] = $this->product;       
-        $data['productid'] = $this->productid;
-        $data['userid'] = $this->userid;        
-        $data['zoneid'] = $this->zoneid;
-
-        return $this->callSmileOne($data,$this->getFullURL(config('smileone.API_URL.purchase')));
+        return $this->callSmileOne($this->formParam(),$this->getFullURL(config('smileone.API_URL.purchase')));
     }
 
     public function callSmileOne($body,$url){
@@ -70,6 +59,14 @@ trait SmileOneTrait{
 
     public function getFullURL($data){
         return config('smileone.domain').$data;
+    }
+
+    private function formParam(){
+        $data['product'] = $this->product;       
+        $data['productid'] = $this->productid;
+        $data['userid'] = $this->userid;        
+        $data['zoneid'] = $this->zoneid;
+        return $data;
     }
 
 

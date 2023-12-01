@@ -34,37 +34,38 @@ class SmileOne
         return !empty($this->config[$key]) ? $this->config[$key] : throw SmileOneException::configError($key);
     }
 
-    public function getProductList(String $product){
-        $this->product = $product;
-       return $this->productPriceList();
-    }
-
-    public function getProduct(String $product){
-        $this->product = $product;
-        return $this->productAvailable();
-     }
-
-    public function getQueryPoints(String $product){
-        $this->product = $product;
-        return $this->productPoints();
-    }
-
-    public function role(String $product,String $productid){
+    public function setProduct(String $product,String $productid = null){
         $this->product = $product;
         $this->productid = $productid;
-        return $this->roleQuery();
+       return $this;
     }
 
-    public function purchase(String $product,String $productid){
-        $this->product = $product;
-        $this->productid = $productid;
-        return $this->postPurchase();
-    }
-
-    public function user(String $userid,String $zoneid){
+    public function setUser(String $userid,String $zoneid){
         $this->userid = $userid;
         $this->zoneid = $zoneid;
         return $this;
     }
+
+    public function getProductList(){
+       return $this->productPriceList();
+    }
+
+    public function getProduct(){
+        return $this->productAvailable();
+    }
+
+    public function checkProductPoints(){
+        return $this->roleQuery();
+    }
+
+    public function getPoints(){
+        return $this->productPoints();
+    }
+
+    public function purchase(){
+        return $this->postPurchase();
+    }
+
+
 
 }
