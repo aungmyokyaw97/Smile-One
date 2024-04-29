@@ -16,6 +16,7 @@ class SmileOne
     protected $product;
     protected $productid;
     protected $config;
+    protected $region;
 
     public function __construct()
     {
@@ -27,7 +28,6 @@ class SmileOne
         $this->uid = $this->getConfigData('uid');
         $this->email = $this->getConfigData('email');
         $this->key = $this->getConfigData('key');
-
     }
 
     private function getConfigData($key){
@@ -46,23 +46,28 @@ class SmileOne
         return $this;
     }
 
-    public function getProductList(){
+    public function getProductList($region = 'br'){
+       $this->region = $region;
        return $this->productPriceList();
     }
 
-    public function getProduct(){
+    public function getProduct($region = 'br'){
+        $this->region = $region;
         return $this->productAvailable();
     }
 
-    public function checkProductPoints(){
+    public function checkProductPoints($region = 'br'){
+        $this->region = $region;
         return $this->roleQuery();
     }
 
-    public function getPoints(){
+    public function getPoints($region = 'br'){
+        $this->region = $region;
         return $this->productPoints();
     }
 
-    public function purchase(){
+    public function purchase($region = 'br'){
+        $this->region = $region;
         return $this->postPurchase();
     }
 

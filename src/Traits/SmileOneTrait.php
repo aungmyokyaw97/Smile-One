@@ -58,7 +58,7 @@ trait SmileOneTrait{
     }
 
     public function getFullURL($data){
-        return config('smileone.domain').$data;
+        return config('smileone.domain'). '/'. $this->region . $data;
     }
 
     private function formParam(){
