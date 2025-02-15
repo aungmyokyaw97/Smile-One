@@ -19,7 +19,7 @@ The dafault region is Brazil.
 
     SmileOne::setProduct(#ProductName)->getProductList(#Region); // Get Product Points List
     // Replace '#ProductName' with your actual product name.
-    // If left empty, it will default to the Brazil region.
+    // If left empty region, it will default to the Brazil region.
     // Example : SmileOne::setProduct('mobilelegends')->getProductList();
     // Example for different region : SmileOne::setProduct('mobilelegends')->getProductList('ph');
     
